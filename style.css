@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600&display=swap');
+
+:root{
+    --pink:#ff90e8;
+    --dark-pink:#b23386;
+    --yellow-light:#ffc900;
+    --yellow-dark:#f1f333;
+    --green:#23a094;
+    --grey:#90a8ed;
+    --tomato:#e2442f;
+}
+.container{
+    max-width: 1500px;
+}
+img{
+    width: 100%;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(9,1fr);
+}
+.flex{
+    display: flex;
+}
