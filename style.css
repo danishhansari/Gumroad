@@ -1,5 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600&display=swap');
 
+
+/* Reset and Utilities */
+*,
+*::after,
+*::before{
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    border-collapse: collapse;
+}
+body{
+    font-family: 'Raleway',Arial,Helvitica,sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+}
+html{
+    scroll-behavior: smooth;
+
+}
+li{
+    list-style: none;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
 :root{
     --pink:#ff90e8;
     --dark-pink:#b23386;
@@ -9,8 +35,11 @@
     --grey:#90a8ed;
     --tomato:#e2442f;
 }
+
 .container{
-    max-width: 1500px;
+    max-width: 1700px;
+    padding-inline: 1em;
+    margin: 0px auto;
 }
 img{
     width: 100%;
@@ -21,4 +50,86 @@ img{
 }
 .flex{
     display: flex;
+}
+/* Transition */
+.navbar,
+.logo img,
+.navbar .list{
+    transition: .5s ease;
+}
+
+
+/* Header Navigation */
+.navbar{
+    padding-block-end:.3em;
+    outline: 3px solid;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+}
+.navbar .item-logo .flex{
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo img{
+    width: 160px;
+}
+.navbar .logo,
+.navbar .button{
+    margin-block-start: 1em;
+    margin-block-end: .2em;
+}
+.navbar .button{
+    cursor: pointer;
+    background: transparent;
+}
+.button .line{
+    transition: 
+    y 100ms ease-in 200ms,
+    rotate 150ms ease;
+    transform-origin: center;
+}
+
+.button.open .line{
+    transition: 
+    y 100ms ease-in,
+    rotate 150ms ease 200ms;
+    fill: white;
+}
+button.open :is(.top,.bottom){
+    y:45px;
+}
+.button.open .top{
+    rotate:45deg;
+}
+.button.open .bottom{
+    rotate:-45deg;
+}
+.navbar .list{
+    background: #000;
+    color: #ccc; 
+    align-self: flex-start;
+    justify-self: flex-start;
+    position: fixed;
+    top: 7vh;
+    left: 0;
+    height: 70vh;
+    width: 100%;
+    display: none;
+}
+.navbar .list ul{
+    padding-inline:1.5em;
+}
+.navbar .login{
+    border-block: 2px solid grey;
+}
+.navbar .login li{
+    margin-block-start: 1em;
+    margin-block-end: 1.5em;
+    font-size: 1.15em;
+}
+.navbar .items li{
+    margin-block-start:1em ;
+    margin-block-end: 1.5em;
+    font-size: 1.15em;
 }
