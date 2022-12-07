@@ -119,7 +119,7 @@ button.open :is(.top,.bottom){
     top: 8vh;
     z-index: 2;
     display: none;
-    height: 60vh;
+    height: 55vh;
     width: 100%;
 }
 .navbar .list ul{
