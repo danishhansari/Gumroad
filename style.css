@@ -14,6 +14,7 @@ body{
     font-family: 'Raleway',Arial,Helvitica,sans-serif;
     font-size: 16px;
     font-weight: 600;
+    background: var(--pink);
 }
 html{
     scroll-behavior: smooth;
@@ -67,7 +68,7 @@ img{
     top: 0px;
     left: 0px;
     width: 100%;
-    height: 60px;
+    height: 8vh;
     z-index: 2;
     background: #fff;
 }
@@ -115,10 +116,9 @@ button.open :is(.top,.bottom){
     align-self: flex-start;
     justify-self: flex-start;
     position: fixed;
-    top: 12vh;
+    top: 8vh;
     z-index: 2;
     display: none;
-    left: 0;
     height: 60vh;
     width: 100%;
 }
@@ -163,6 +163,9 @@ button.open :is(.top,.bottom){
     margin-block-start: 1em;
     margin-block-end: 2em;
 }
+.hero .selling{
+    z-index: 1;
+}
 .hero .selling a{
     font-size: 1.3em;
     display: block;
@@ -173,6 +176,51 @@ button.open :is(.top,.bottom){
     margin-bottom: 2em;
     padding-block: 1em;
     border-radius: 5px;
+    position: relative;
+    transition: .3s;
+}
+.hero .selling a::after{
+    content: '';
+    font-size: 1.3em;
+    display: block;
+    background:var(--pink);
+    border: 2px solid black;
+    color: #fff;
+    width: 100%;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    margin-inline: auto;
+    margin-bottom: 2em;
+    padding-block: 1.2em;
+    border-radius: 5px; 
+    z-index:-1;
+    opacity: 0;
+    transition:  display .2s ease-out;
+}
+.hero .selling a::before{
+    content: '';
+    font-size: 1.3em;
+    display: block;
+    background:var(--yellow-light);
+    border: 2px solid black;
+    color: #fff;
+    width: 100%;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    margin-inline: auto;
+    margin-bottom: 2em;
+    padding-block: 1.2em;
+    border-radius: 5px; 
+    z-index:-1;
+    opacity: 0;
+    transition:  opacity .1s ease-out .1s;
+}
+.hero .selling a:hover:after,
+.hero .selling a:hover::before{
+    opacity: 1;
+
 }
 .hero .image{
     border: 1px solid;
@@ -183,10 +231,10 @@ button.open :is(.top,.bottom){
 /* Girls */
 .hero .image{
     position: relative;
-    height: 85vh;
+    height:55vh;
 }
 .hero .image .girl{
-    width: 90%;
+    width: 80%;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -197,11 +245,34 @@ button.open :is(.top,.bottom){
     position: absolute;
 }
 .hero .image .brush{
-    width: 30%;
+    width: 20%;
     right: 0%;
     top: 20%;
 }
 .hero .image .ggg{
     width: 50%;
-    bottom: 12%;
+    bottom: 10%;
+    left: 0%;
+}
+
+/* Workd Section */
+.works .flex{
+    flex-direction: column;
+}
+.works .flex .white{
+    background: white;
+    font-size: 1.75em;
+    text-align: center;
+    border: 2px solid ;
+
+}
+.works .white .container{
+    margin-block: 2em;
+}
+.works .yellow{
+    position: relative;
+    background:var(--yellow-dark);
+}
+.works .yellow .gif{
+    position: relative;
 }
