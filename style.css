@@ -43,7 +43,7 @@ a{
 
 .container{
     max-width: 1700px;
-    padding-inline: 1em;
+    padding-inline: 1.5em;
     margin: 0px auto;
 }
 p{
@@ -272,7 +272,7 @@ button.open :is(.top,.bottom){
     background: white;
     font-size: 1.75em;
     text-align: center;
-    border: 2px solid ;
+    border: 1px solid black;
 
 }
 .works .white .container{
@@ -283,7 +283,7 @@ button.open :is(.top,.bottom){
 }
 .works .yellow .gif{
     position: relative;
-    border: 2px solid black;
+    border: 1px solid black;
     margin-block: 1em;
     border-radius: 10px;
 }
@@ -381,7 +381,7 @@ align-items: center;
 }
 .bets .dark-pink{
     background:var(--dark-pink);
-    border-top: 2px solid;
+    border-top:1px solid;
 }
 .bets .light-pink{
     background:var(--pink);
@@ -412,7 +412,7 @@ align-items: center;
     display: inline-block;
     padding: .9em .5em;
     font-size: .8em;
-    border: 2px solid;
+    border:1px solid;
     position: absolute;
     top: 15%;
     left: 5%;
@@ -424,7 +424,7 @@ align-items: center;
     background:var(--yellow-dark);
     padding-block:4em;
     position: relative;
-    border-block: 2px solid black;
+    border-block: 1px solid black;
 }
 .book .yellow-book .img{
     margin: auto;
@@ -436,7 +436,7 @@ align-items: center;
     background: white;
     padding: .9em .5em;
     font-size: .8em;
-    border: 2px solid black;
+    border: 1px solid black;
     border-radius: 10px;
     position: absolute;
     top: 10%;
@@ -479,7 +479,7 @@ align-items: center;
 }
 .sell-anything{
     background: white;
-    border-block: 2px solid black;
+    border-block: 1px solid black;
 }
 .sell-anything .flex{
     flex-direction: column;
@@ -502,13 +502,14 @@ align-items: center;
 }
 .sell-anything .sell-text p{
     margin-top: 1.5em;
-    font-size: 1.2em;
+    font-size: 1.3em;
     font-weight: 500;
     line-height: 1.4;
 }
 .sell-anything .sell-text ul{
     margin-top: 2em;
     margin-bottom: 5em;
+    font-size: 1.2em;
 }
 .sell-anything .sell-text ul img{
     width: 20px;
@@ -581,7 +582,7 @@ align-items: center;
 }
 .follow .follow-sell{
     background: white;
-    border: 2px solid black;
+    border: 1px solid black;
 }
 .follow .follow-sell .container{
     margin-block: 1em;
@@ -599,5 +600,132 @@ align-items: center;
 }
 .men{
     background:var(--green);
-    border-block-end: 2px solid black;
+    border-block-end: 1px solid black;
+}
+
+/* Sell anywhere section */
+
+.sell-anywhere .flex{
+    flex-direction: column;
+}
+.sell-anywhere .tutorial{
+    display: flex;
+    background:var(--yellow-dark);
+    padding-block: 3em;
+    border:1px solid black;
+}
+.sell-anywhere .tutorial img{
+    margin: auto;
+}
+
+.sell-anywhere .anywhere{
+    border: 1px solid black;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sell-anywhere .anywhere h1{
+    font-size: 2.2em;
+    font-weight: 500;
+    margin-block: 1.5em;
+    margin-block-end: 1em;
+}
+.sell-anywhere .anywhere p{
+    font-size: 1.15em;
+    line-height: 1.4;
+    font-weight: 600;
+    margin-bottom: 3em;
+}
+
+/* Inspiration */
+
+
+.inspiration{
+    background: white;
+}
+.inspiration .text{
+    margin-block: 2em;
+}
+.inspiration .text h1{
+    margin-top: 1em;
+font-size: 1.8em;
+font-weight: 600;
+}
+.inspiration .text h3{
+    font-size: 1.18em;
+    font-weight: 500;
+    margin-block: 1em;
+}
+.inspiration .grid{
+    margin-top: 2em;
+    gap: 25px;
+    place-content: center;
+}
+.inspiration .grid > div{
+    grid-column: 1/10;
+    padding: 1em;
+}
+.inspiration .grid .item{
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.inspiration .item img{
+    width: 100px;
+}
+.inspiration .item h1{
+    font-size: 2.2em;
+    color:rgb(0, 0, 54);
+    margin-block: .2em;
+    line-height: 1.2;
+}
+.inspiration .item p{
+    color:rgb(0, 0, 89);
+    font-size: 1.1em;
+    margin-block: .5em;
+}
+.inspiration .item h4{
+    margin-block: .5em;
+}
+.inspiration  .item span{
+    font-size: .8em;
+    margin-right: 1em;
+    background: white;
+    padding:.8em;
+    display: inline-block;
+    margin-right: .3em;
+    margin-block: .3em;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+
+.inspiration .grid-1,
+.inspiration .grid-3,
+.inspiration .grid-7,
+.inspiration .grid-13{
+    background:var(--green);
+}
+
+.inspiration .grid-2,
+.inspiration .grid-9,
+.inspiration .grid-11,
+.inspiration .grid-15{
+    background:var(--tomato);
+}
+.inspiration .grid-4,
+.inspiration .grid-12,
+.inspiration .grid-14{
+    background: var(--yellow-light);
+}
+.inspiration .grid-5,
+.inspiration .grid-10,
+.inspiration .grid-16{
+    background:var(--yellow-dark);
+}
+.inspiration .grid-6,
+.inspiration .grid-8,
+.inspiration .grid-17{
+    background:var(--grey);
 }
