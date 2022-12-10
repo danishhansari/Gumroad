@@ -670,6 +670,7 @@ font-weight: 600;
 .inspiration .grid .item{
     border: 1px solid black;
     border-radius: 10px;
+    position: relative;
 }
 .inspiration .item img{
     width: 100px;
@@ -696,10 +697,38 @@ font-weight: 600;
     display: inline-block;
     margin-right: .3em;
     margin-block: .3em;
-    border-radius: 10px;
-    border: 2px solid black;
+    border-radius: 20px;
+    border: 1px solid black;
+    transition: .3s transform ease;
+    z-index: 1;
+    cursor: pointer;
 }
-
+.item span::after,
+.item span::before{
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    transition: .3s transform ease;
+    z-index: -1;
+    border-radius: inherit;
+    border: inherit;
+    text-align: center;
+    background: #000;
+    color: white;
+}
+.item span:hover{
+    text-align: right;
+    background: white;
+    transform: translate(-8px , -8px);
+}
+.item span:hover::after{
+    background: white;
+    transform: translate(-6px,-6px);
+    /* z-index: -1; */
+}
 
 .inspiration .grid-1,
 .inspiration .grid-3,
