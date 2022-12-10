@@ -43,7 +43,7 @@ a{
     margin: 0px auto;
 }
 img{
-    width: 100%;
+    max-width: 100%;
 }
 .grid{
     display: grid;
@@ -119,7 +119,7 @@ button.open :is(.top,.bottom){
     top: 8vh;
     z-index: 2;
     display: none;
-    height: 55vh;
+    height: 50vh;
     width: 100%;
 }
 .navbar .list ul{
@@ -234,6 +234,7 @@ button.open :is(.top,.bottom){
     height:55vh;
 }
 .hero .image .girl{
+    max-width: 500px;
     width: 80%;
     position: absolute;
     left: 50%;
@@ -242,6 +243,7 @@ button.open :is(.top,.bottom){
 }
 .hero .image .brush,
 .hero .image .ggg{
+    max-width: 200px;
     position: absolute;
 }
 .hero .image .brush{
@@ -270,9 +272,171 @@ button.open :is(.top,.bottom){
     margin-block: 2em;
 }
 .works .yellow{
-    position: relative;
     background:var(--yellow-dark);
 }
 .works .yellow .gif{
     position: relative;
+    border: 2px solid black;
+    margin-block: 1em;
+    border-radius: 10px;
+}
+
+.works .yellow .gif p{
+    position: absolute;
+    background:var(--yellow-dark);
+}
+
+.works .yellow .gif .bottom{
+    bottom: -9px;
+    padding-inline: 1em;
+} 
+/* Yellow Div Paragraph bottom and top */
+.works .yellow .gif .top,
+.works .yellow .gif .bottom{
+    left: 50%;
+    transform: translate(-50%);
+    padding-inline: .5em;
+    text-align: center;
+}
+.works .yellow .gif .top{
+    top: -9px;
+}
+
+/* Yellow Div Paragraph Right and Left */
+.works .yellow .gif .right,
+.works .yellow .gif .left{
+    padding-inline: 1em;
+    writing-mode: vertical-rl;
+}
+.works .yellow .gif .right{
+    right: -9px;
+    top: 50%;
+    transform: translate(0px,-50%);
+}
+.works .yellow .gif .left {
+    left: 0px;
+    top: 25%;
+    transform: translate(-50%);
+}
+
+
+
+/* Yellow Border Arrow */
+.works .gif .arrow{
+    position: absolute;  
+}
+.works .gif .r-top{
+    top: -10px;
+    left: 23%;
+}
+.works .gif .l-bottom{
+    right: -2.5%;
+    top: 27%;
+    rotate: -90deg;
+}
+.works .gif .r-bottom{
+    bottom: -3.5%;
+    right: 25%;
+}
+.works .gif .l-top{
+    rotate: -90deg;
+    bottom: 9%;
+    left: -2.5%;
+}
+
+
+/* gif Image */
+.works .gif .center{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+
+.bets{
+    flex-direction: column;
+}
+.bets .dark-pink,
+.bets .light-pink{
+    width: 100%;
+    width: 100%;
+    text-align: center;
+    border: 1px solid black;
+    height: 35vh;
+    font-size: 1.3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bets .dark-pink h1,
+.bets .light-pink h1{
+    font-weight: 500;
+}
+.bets .dark-pink{
+    background:var(--dark-pink);
+    border-top: 2px solid;
+}
+.bets .light-pink{
+    background:var(--pink);
+}
+
+/* books */
+.book .flex{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.book .black-book{
+    background: #000;
+    padding-block: 4em;
+    position: relative;
+}
+.book .black-book .img{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.book .black-book .img img{
+    width: 80%;
+}
+.book .black-book .text {
+    background: white;
+    display: inline-block;
+    padding: .9em .5em;
+    font-size: .8em;
+    border: 2px solid;
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.book .yellow-book{
+    background:var(--yellow-dark);
+    padding-block:4em;
+    position: relative;
+}
+.book .yellow-book .img{
+    margin: auto;
+    width: 80%;
+}
+
+.book .yellow-book .text{
+    display: inline-block;
+    background: white;
+    padding: .9em .5em;
+    font-size: .8em;
+    border: 2px solid black;
+    border-radius: 10px;
+    position: absolute;
+    top: 10%;
+    left: 7%;
+}
+.book .yellow-book .exciting{
+    width: 50%;
+    position: absolute;
+    bottom: 3%;
+    right: 5%;
 }
