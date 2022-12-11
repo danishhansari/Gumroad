@@ -649,6 +649,9 @@ font-weight: 600;
     font-weight: 500;
     margin-block: 1em;
 }
+.inspiration{
+    padding-block: 1.5em;
+}
 .inspiration .grid{
     margin-top: 2em;
     gap: 25px;
@@ -662,6 +665,7 @@ font-weight: 600;
     border: 1px solid black;
     border-radius: 10px;
     position: relative;
+    max-width: 500px;
 }
 .inspiration .item img{
     width: 100px;
@@ -693,6 +697,8 @@ font-weight: 600;
     transition: .3s transform ease;
     z-index: 1;
     cursor: pointer;
+    user-select: none;
+    
 }
 .item span::after{
     content: '';
@@ -725,7 +731,6 @@ font-weight: 600;
 .inspiration .grid-13{
     background:var(--green);
 }
-
 .inspiration .grid-2,
 .inspiration .grid-9,
 .inspiration .grid-11,
