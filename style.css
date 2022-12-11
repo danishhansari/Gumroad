@@ -699,7 +699,7 @@ display: block;
     display: inline-block;
     margin-right: .3em;
     margin-block: .3em;
-    border-radius: 20px;
+    border-radius: 15px;
     border: 1px solid black;
     transition: .3s transform ease-in-out;
     z-index: 1;
@@ -723,12 +723,12 @@ display: block;
 .item span:hover{
     text-align: right;
     background: black;
-    transform: translate(-8px , -8px);
+    transform: translate(-5px , -5px);
     z-index: 1;
 }
 .item span:hover::after{
     background: white;
-    transform: translate(-5px,-5px);
+    transform: translate(-4px,-4px);
 }
 
 .inspiration .grid-1,
@@ -829,19 +829,20 @@ display: block;
     position: relative;
 }
 .amount .amount-text h1{
-    font-size: 2.8em;
+    font-size: 3.5em;
     font-weight: 500;
-    margin-block: 1em;
+    margin-block: .5em;
 }
 .amount .amount-text p{
-    font-size: 1.3em;
+    font-size: 1.4em;
     margin-block-end: 2em;
+    font-weight: 500;
 }
 .amount .amount-text img{
     position: absolute;
-    width: 35%;
+    width: 30%;
     left: -30px;
-    bottom: -80px;
+    bottom: -90px;
 }
 .amount .amount-img{
     background: url('img/amount-img.svg');
@@ -857,7 +858,39 @@ display: block;
 .grow .grow-text{
     background:var(--yellow-light) ;
     border-block: 1px solid black;
+    /* height: 50vh; */
 }
 .grow .grow-text h1{
     font-size: 2em;
+    font-weight: 500;
+    margin-top: 2.5em;
+    line-height: 1.3;
+}
+.grow .grow-text p{
+    font-size: 1.2em;
+    margin-block: 2em;
+}
+.grow .grow-text a{
+    font-size: 1.2em;
+    margin-bottom: 3em;
+    display: inline-block;
+    padding: .5em;
+    transition: .3s letter-spacing;
+}
+.grow .grow-text a:hover{
+    letter-spacing: 1.5px;
+}
+
+.grow .grow-img{
+    padding-block: 2em;
+    background:var(--yellow-dark);
+    margin: auto;
+    width: 100%;
+    position: relative;
+}
+.grow .grow-img .new{
+    position: absolute;
+    bottom: -2%;
+    left: -40px;
+    width: 40%;
 }
