@@ -850,3 +850,14 @@ display: block;
     height: 45vh;
     width: 100%;
 }
+/* Grow section */
+.grow .flex{
+    flex-direction: column;
+}
+.grow .grow-text{
+    background:var(--yellow-light) ;
+    border-block: 1px solid black;
+}
+.grow .grow-text h1{
+    font-size: 2em;
+}
