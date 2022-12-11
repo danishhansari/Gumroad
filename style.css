@@ -63,7 +63,7 @@ img{
 .navbar,
 .logo img,
 .navbar .list{
-    transition: .5s ease;
+    transition: .5s ease-in-out;
 }
 
 
@@ -97,15 +97,15 @@ img{
 }
 .button .line{
     transition: 
-    y 100ms ease-in 200ms,
-    rotate 150ms ease;
+    y 100ms ease-in-out 200ms,
+    rotate 150ms ease-in-out;
     transform-origin: center;
 }
 
 .button.open .line{
     transition: 
-    y 100ms ease-in,
-    rotate 150ms ease 200ms;
+    y 100ms ease-in-out,
+    rotate 150ms ease-in-out 200ms;
     fill: white;
 }
 button.open :is(.top,.bottom){
@@ -133,7 +133,7 @@ button.open :is(.top,.bottom){
     padding-inline:1.5em;
 }
 .navbar .login{
-    border-block: 2px solid grey;
+    border-block: 1px solid grey;
 }
 .navbar .login li{
     margin-block-start: 1em;
@@ -182,7 +182,7 @@ button.open :is(.top,.bottom){
     margin-block: 1em;
     margin-bottom: 3em;
     border-radius: 5px;
-    transition: .3s transform ease,.3s background ease;
+    transition: .3s transform ease-in-out,.3s background ease-in-out;
     position: relative;
 }
 
@@ -194,9 +194,9 @@ button.open :is(.top,.bottom){
     left: 0;
     height: 100%;
     width: 100%;
-    transition: .3s transform ease;
+    transition: .3s transform ease-in-out;
     border-radius: inherit;
-    border: 2px solid black;
+    border-block: 1px solid black;
     text-align: center;
     color: white;
 }
@@ -221,7 +221,7 @@ button.open :is(.top,.bottom){
 
 
 .hero .image{
-    border: 1px solid;
+    border-block: 1px solid black;
     background: var(--yellow-dark);
     width: 100%;
 }
@@ -263,7 +263,7 @@ button.open :is(.top,.bottom){
     background: white;
     font-size: 1.75em;
     text-align: center;
-    border: 1px solid black;
+    border-block: 1px solid black;
 
 }
 .works .white .container{
@@ -359,7 +359,7 @@ align-items: center;
     width: 100%;
     width: 100%;
     text-align: center;
-    border: 1px solid black;
+    border-block: 1px solid black;
     height: 35vh;
     font-size: 1.3em;
     display: flex;
@@ -403,7 +403,7 @@ align-items: center;
     display: inline-block;
     padding: .9em .5em;
     font-size: .8em;
-    border:1px solid;
+    border:1px solid black;
     position: absolute;
     top: 15%;
     left: 5%;
@@ -460,7 +460,7 @@ align-items: center;
 .explore .flex .text a{
     font-size: 1.2em;
     font-weight: bold;
-    transition: .3s letter-spacing;
+    transition: .3s letter-spacing ease-in-out;
 }
 .explore .text a img{
     width: 30px;
@@ -514,7 +514,7 @@ align-items: center;
 .designer{
     background:var(--pink);
     padding-block: 1em;
-    border: 1px solid black;
+    border-block: 1px solid black;
 }
 .designer .design{
     margin-top: 2em;
@@ -573,7 +573,7 @@ align-items: center;
 }
 .follow .follow-sell{
     background: white;
-    border: 1px solid black;
+    border-block: 1px solid black;
 }
 .follow .follow-sell .container{
     margin-block: 1em;
@@ -603,14 +603,14 @@ align-items: center;
     display: flex;
     background:var(--yellow-dark);
     padding-block: 3em;
-    border:1px solid black;
+    border-block:1px solid black;
 }
 .sell-anywhere .tutorial img{
     margin: auto;
 }
 
 .sell-anywhere .anywhere{
-    border: 1px solid black;
+    border-block: 1px solid black;
     background: white;
     display: flex;
     justify-content: center;
@@ -640,17 +640,20 @@ align-items: center;
     margin-block: 2em;
 }
 .inspiration .text h1{
-    margin-top: 1em;
+margin-top: 1em;
 font-size: 1.8em;
 font-weight: 600;
+width: 100%;
+display: block;
 }
 .inspiration .text h3{
-    font-size: 1.18em;
+    font-size: 1.3em;
     font-weight: 500;
     margin-block: 1em;
 }
 .inspiration{
     padding-block: 1.5em;
+    border-block: 1px solid black;
 }
 .inspiration .grid{
     margin-top: 2em;
@@ -665,7 +668,8 @@ font-weight: 600;
     border: 1px solid black;
     border-radius: 10px;
     position: relative;
-    max-width: 500px;
+    max-width: 600px;
+    padding: 1em;
 }
 .inspiration .item img{
     width: 100px;
@@ -673,15 +677,18 @@ font-weight: 600;
 .inspiration .item h1{
     font-size: 2.2em;
     color:rgb(0, 0, 54);
-    margin-block: .2em;
+    margin-block: .5em;
     line-height: 1.2;
 }
 .inspiration .item p{
     color:rgb(0, 0, 89);
-    font-size: 1.1em;
-    margin-block: .5em;
+    font-size: 1.4em;
+    font-weight: 500;
+    margin-block: .8em;
 }
 .inspiration .item h4{
+    font-size: 1.1em;
+    color: rgb(0, 0, 89);
     margin-block: .5em;
 }
 .inspiration  .item span{
@@ -694,11 +701,10 @@ font-weight: 600;
     margin-block: .3em;
     border-radius: 20px;
     border: 1px solid black;
-    transition: .3s transform ease;
+    transition: .3s transform ease-in-out;
     z-index: 1;
     cursor: pointer;
-    user-select: none;
-    
+    user-select: none;   
 }
 .item span::after{
     content: '';
@@ -707,7 +713,7 @@ font-weight: 600;
     left: 0px;
     height: 100%;
     width: 100%;
-    transition: .3s transform ease;
+    transition: .3s transform ease-in-out;
     z-index: -1;
     border-radius: inherit;
     border: inherit;
@@ -751,4 +757,96 @@ font-weight: 600;
 .inspiration .grid-8,
 .inspiration .grid-17{
     background:var(--grey);
+}
+.inspiration .grid-17{
+    margin-bottom: 3em;
+}
+.white-girl{
+    position: relative;
+    border-block:1px solid black;
+    padding-block: 1em;
+}
+.white-girl .flex{
+    flex-direction: column-reverse;
+}
+.white-girl .white-img{
+    margin-top: 3em;
+    max-width: 450px;
+    position: relative;
+    padding-block-start: 2em;
+    padding-block-end: 6em;
+}
+.white-girl .white-img .dollar{
+    position:absolute;
+    top: 5%;
+    left: 0px;
+    width: 20%;
+}
+.white-girl .white-img .how-to{
+    position: absolute;
+    bottom: 13%;
+    right: 0px;
+    width: 50%;
+}
+.white-girl .white-img .bold{
+    background: white;
+    display: inline-block;
+    padding: .4em .8em;
+    font-size: .8em;
+    border: 2px solid black;
+    border-radius: 50px;
+    position: absolute;
+    bottom: 15%;
+    font-weight: bold;
+}
+.white-girl .white-text p{
+    font-size: 1.3em;
+    line-height: 1.4;
+    color: #161616;
+}
+.white-girl .white-text .bold{
+    margin-block: 1em;
+    font-size:1.3em ;
+    font-weight: bold;
+    color: black;
+}
+.white-girl .white-g{
+    position: absolute;
+    right: 0px;
+    bottom: -3%;
+    width: 30%;
+}
+
+
+.amount{
+    background:white;
+}
+.amount .flex{
+    flex-direction: column;
+}
+.amount .amount-text{
+    padding-block: 1em;
+    position: relative;
+}
+.amount .amount-text h1{
+    font-size: 2.8em;
+    font-weight: 500;
+    margin-block: 1em;
+}
+.amount .amount-text p{
+    font-size: 1.3em;
+    margin-block-end: 2em;
+}
+.amount .amount-text img{
+    position: absolute;
+    width: 35%;
+    left: -30px;
+    bottom: -80px;
+}
+.amount .amount-img{
+    background: url('img/amount-img.svg');
+    background-position: center;
+    background-size: cover;
+    height: 45vh;
+    width: 100%;
 }
