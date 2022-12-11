@@ -10,6 +10,8 @@
     border: 0px;
     border-collapse: collapse;
     vertical-align: middle;
+    outline: none;
+    border: none;
 }
 ::selection{
     background:var(--pink);
@@ -30,6 +32,7 @@ li{
 a{
     color: inherit;
     text-decoration: none;
+    display: inline-block;
 }
 :root{
     --pink:#ff90e8;
@@ -858,17 +861,16 @@ display: block;
 .grow .grow-text{
     background:var(--yellow-light) ;
     border-block: 1px solid black;
-    /* height: 50vh; */
 }
 .grow .grow-text h1{
     font-size: 2em;
     font-weight: 500;
-    margin-top: 2.5em;
+    margin-top: 1.3em;
     line-height: 1.3;
 }
 .grow .grow-text p{
     font-size: 1.2em;
-    margin-block: 2em;
+    margin-block: 1.5em;
 }
 .grow .grow-text a{
     font-size: 1.2em;
@@ -887,10 +889,150 @@ display: block;
     margin: auto;
     width: 100%;
     position: relative;
+    border-block: 1px solid black;
 }
 .grow .grow-img .new{
     position: absolute;
-    bottom: -2%;
-    left: -40px;
-    width: 40%;
+    bottom: -0%;
+    left: -45px;
+    max-width: 200px;
+    width: 130px;
+}
+.university .explore{
+    padding-block: 1em;
+    border-block: 1px solid black;
+}
+.university .explore h4{
+    margin-block: 2em;
+    font-size: .9em;
+    font-weight: 600;
+}
+.university .explore h1{
+    font-size: 1.8em;
+    line-height: 1.2;
+    margin-block: .5em;
+}
+.university .explore p{
+    font-size: 1.2em;
+    margin-block: 1em;
+}
+.university .explore a{
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: .3s letter-spacing ease-in-out;
+    padding: .5em;
+    padding-left: 0px;
+    display: inline-block;
+    margin-block: 1em;
+}
+.university .explore a:hover{
+    letter-spacing: 1px;
+}
+.new-release{
+    background: black;
+    border-block: 1px solid;
+    padding-block: 1em;
+}
+.new-release .flex{
+    flex-direction: column-reverse;
+}
+.new-release .book{
+    position: relative;
+    margin-top: 2em;
+    padding-block: 1em;
+}
+.new-release .book .new-book{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 180px;
+}
+.new-release .founder .ceo{
+   width: 30%;
+}
+.new-release .founder h4,
+.new-release .founder p,
+.new-release .founder h1{
+    color: white;
+}
+.new-release .founder h4{
+    font-size: 1.5em;
+    margin-block: .5em;
+}
+.new-release .founder p{
+    font-size: 1.2em;
+}
+.new-release .founder h1{
+    font-size:1.5em;
+    margin-block: .5em;
+}
+.new-release .founder-p{
+    margin-bottom: 3em;
+}
+.share-work{
+    padding-block: 1em;
+    border-block:1px solid black;
+    text-align: center;
+}
+.share-work .text h1{
+    font-size: 2em;
+    margin-block: 1em;
+    line-height: 1;
+}
+.share-work .text a{
+    background: #000;
+    color: white;
+    display: block;
+    padding-block: 1em;
+    font-size: 1.1em;
+    border-radius: 5px;
+    margin-block-end: 2em;
+    transition: .3s transform ease;
+    z-index: 1;
+    position: relative;
+}
+.newsletter{
+    background: #000;
+    color: white;
+    border: 1px solid black;
+    padding-block: 1em;
+}
+.newsletter .email img{
+    width: 200px;
+    margin-top: 3em;
+    margin-block-end: 2em;
+}
+.newsletter .email h1{
+    font-size: 1.8em;
+    line-height: 1;
+    margin-bottom: 1em;
+}
+.newsletter .email input{
+    background:white;
+    display: block;
+    width: 100%;
+    padding-block: 1em;
+    font-size: 1.1em;
+    font-family: 'Raleway',sans-serif;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    border: 2px solid black;
+    border-radius: 5px;
+}   
+.newsletter .email input::placeholder{
+    color: black;
+    font-weight: bold;
+}
+.newsletter .email a{
+    display: block;
+    text-align: center;
+    background:var(--pink);
+    padding: 1em;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+.newsletter .email a img{
+    width: 20px;
+    margin: auto;
 }
