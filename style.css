@@ -6,7 +6,6 @@
     padding: 0px;
     margin: 0px;
     border: 0px;
-    /* border-collapse: collapse; */
     vertical-align: middle;
     outline: none;
     border: none;
@@ -17,7 +16,6 @@
 body{
     font-family: 'Raleway',Arial,Helvitica,sans-serif;
     font-size: 16px;
-    /* font-weight: 600; */
     background: var(--pink);
 }
 html{
@@ -88,8 +86,6 @@ img{
 }
 .navbar .logo,
 .navbar .button{
-    /* margin-block-start: 1em;
-    margin-block-end: .2em; */
     margin:1em 0em .2em 0em ;
 }
 .navbar .button{
@@ -153,10 +149,6 @@ button.open :is(.top,.bottom){
     margin: 1em 0em 1.5em 0em;
     font-size: 1.15em;
 }
-/* .navbar:is(.login li,.items li){
-    margin: 1em 0em 1.5em 0em;
-    font-size: 1.15em;  
-} */
 .hero{
     margin-top:4.1em;
     position: relative;
@@ -178,9 +170,6 @@ button.open :is(.top,.bottom){
     font-size: 1.3em;
     font-weight: 500;
     width: 85%;
-    /* margin-inline: auto;
-    margin-block-start: 1em;
-    margin-block-end: 2em; */
     margin: 1em auto 2em auto;
 }
 .hero .selling{
@@ -193,8 +182,6 @@ button.open :is(.top,.bottom){
     padding-block:1em;
     background: #000;
     color: white;
-    /* margin-block: 1em;
-    margin-bottom: 3em; */
     margin: 1em 0em 3em 0em;
     border-radius: 5px;
     transition: .3s transform ease-in-out,.3s background ease-in-out;
@@ -250,11 +237,6 @@ button.open :is(.top,.bottom){
     top: 50%;
     transform: translate(-50%,-50%);
 }
-/* .hero .image .brush,
-.hero .image .ggg{
-    max-width: 200px;
-    position: absolute;
-} */
 .hero .image :is(.brush,.ggg){
     max-width: 200px;
     position: absolute;
@@ -447,8 +429,6 @@ align-items: center;
     background:white;
 }
 .explore .flex .text{
-    /* margin-block: 2em; */
-    /* margin-bottom: 4em; */
     margin: 2em 0px 4em 0em;
 }
 .explore .flex .text h1{
@@ -479,13 +459,8 @@ align-items: center;
     flex-direction: column;
 }
 .sell-anything .sell-img{
-    /* background: url('img/pay-month.svg'),var(--green); */
     background: no-repeat center/contain url("img/pay-month.svg");
     height: 70vh;
-    /* background-size: contain;
-    background-position:center;
-    background-repeat: no-repeat; */
-}
 
 .sell-anything .sell-text{  
     margin-top: 3em;
@@ -502,8 +477,6 @@ align-items: center;
     line-height: 1.4;
 }
 .sell-anything .sell-text ul{
-    /* margin-top: 2em;
-    margin-bottom: 5em; */
     margin: 2em 0em 5em 0em;
     font-size: 1.2em;
 }
@@ -558,8 +531,6 @@ align-items: center;
 }
 .designer .design-text .bold{
     font-weight: bold;
-    /* margin-block: 2em;
-    margin-bottom: 3em; */
     margin:2em 0em 3em 0em;
 }
 
@@ -623,8 +594,6 @@ align-items: center;
 .sell-anywhere .anywhere h1{
     font-size: 2.2em;
     font-weight: 500;
-    /* margin-block: 1.5em;
-    margin-block-end: 1em; */
     margin: 1.5em 0px 1em 0em;
 }
 .sell-anywhere .anywhere p{
@@ -698,8 +667,6 @@ display: block;
     background: white;
     padding:.8em;
     display: inline-block;
-    /* margin-right: .3em;
-    margin-block: .3em; */
     margin: .3em .3em .3em 0em;
     border-radius: 15px;
     border: var(--border);
@@ -732,46 +699,18 @@ display: block;
     background: white;
     transform: translate(-4px,-4px);
 }
-
-/* .inspiration .grid-1,
-.inspiration .grid-3,
-.inspiration .grid-7,
-.inspiration .grid-13{
-    background:var(--green);
-} */
 .inspiration :is(.grid-1,.grid-3, .grid-7 ,.grid-13){
     background: var(--green);
 }
-/* .inspiration .grid-2,
-.inspiration .grid-9,
-.inspiration .grid-11,
-.inspiration .grid-15{
-    background:var(--tomato);
-} */
 .inspiration :is(.grid-2,.grid-9,.grid-11,.grid-15){
     background: var(--tomato);
 }
-/* .inspiration .grid-4,
-.inspiration .grid-12,
-.inspiration .grid-14{
-    background: var(--yellow-light);
-} */
 .inspiration :is(.grid-4, .grid-12,.grid-14){
     background: var(--yellow-light);
 }
-/* .inspiration .grid-5,
-.inspiration .grid-10,
-.inspiration .grid-16{
-    background:var(--yellow-dark);
-} */
 .inspiration :is(.grid-5,.grid-10,.grid-16){
     background: var(--yellow-dark);
 }
-/* .inspiration .grid-6,
-.inspiration .grid-8,
-.inspiration .grid-17{
-    background:var(--grey);
-} */
 .inspiration :is(.grid-6,.grid-8,.grid-17){
     background: var(--grey);
 }
@@ -790,8 +729,6 @@ display: block;
     margin-top: 3em;
     max-width: 450px;
     position: relative;
-    /* padding-block-start: 2em;
-    padding-block-end: 6em; */
     padding: 2em 0px 6em 0em;
 }
 .white-girl .white-img :is(.dollar,.how-to){
@@ -822,15 +759,11 @@ display: block;
     font-weight: bold;
 }
 .white-girl .white-text p{
-    /* font-size: 1.3em; */
     line-height: 1.4;
-    /* color: #161616; */
 }
 .white-girl .white-text .bold{
     margin-block: 1em;
-    /* font-size:1.3em ; */
     font-weight: bold;
-    /* color: black; */
 }
 .white-girl .white-text :is(p,.bold){
     font-size: 1.3em;
@@ -854,13 +787,11 @@ display: block;
 }
 .amount .amount-text h1{
     font-size: 3.5em;
-    /* font-weight: 500; */
     margin-block: .5em;
 }
 .amount .amount-text p{
     font-size: 1.4em;
     margin-block-end: 2em;
-    /* font-weight: 500; */
 }
 .amount .amount-text :is(h1,p){
     font-weight: 500;
@@ -872,9 +803,6 @@ display: block;
     bottom: -90px;
 }
 .amount .amount-img{
-    /* background: url('img/amount-img.svg');
-    background-position: center;
-    background-size: cover; */
     background: no-repeat center/cover url('img/amount-img.svg');
     height: 45vh;
     width: 100%;
@@ -894,11 +822,9 @@ display: block;
     line-height: 1.3;
 }
 .grow .grow-text p{
-    /* font-size: 1.2em; */
     margin-block: 1.5em;
 }
 .grow .grow-text a{
-    /* font-size: 1.2em; */
     margin-bottom: 3em;
     display: inline-block;
     padding: .5em;
@@ -940,15 +866,11 @@ display: block;
     margin-block: .5em;
 }
 .university .explore p{
-    /* font-size: 1.2em; */
     margin-block: 1em;
 }
 .university .explore a{
-    /* font-size: 1.2em; */
     font-weight: bold;
     transition: .3s letter-spacing ease-in-out;
-    /* padding: .5em;
-    padding-left: 0px; */
     padding: .5em .5em .5em 0em;
     display: inline-block;
     margin-block: 1em;
@@ -981,27 +903,14 @@ display: block;
 .new-release .founder .ceo{
    width: 30%;
 }
-/* .new-release .founder h4,
-.new-release .founder p,
-.new-release .founder h1{
-    color: white;
-} */
 .new-release .founder :is(h4,p,h1){
     color: white;
     font-size:2em;
     margin-block: .5em;
 }
-/* .new-release .founder h4{
-    font-size: 1.5em;
-    margin-block: .5em;
-} */
 .new-release .founder p{
     font-size: 1.2em;
 }
-/* .new-release .founder h1{
-    font-size:1.5em;
-    margin-block: .5em;
-} */
 .new-release .founder-p{
     margin-bottom: 3em;
 }
