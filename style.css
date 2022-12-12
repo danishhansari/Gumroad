@@ -997,6 +997,10 @@ display: block;
     border: 1px solid black;
     padding-block: 1em;
 }
+.newsletter .flex{
+    flex-direction: column;
+}
+
 .newsletter .email img{
     width: 200px;
     margin-top: 3em;
@@ -1035,4 +1039,29 @@ display: block;
 .newsletter .email a img{
     width: 20px;
     margin: auto;
+}
+ 
+.newsletter .list {
+    margin-top: 2em;
+}
+.newsletter .list li{
+    margin-block: .5em;
+    font-size: 1.3em;
+}
+.newsletter .link ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+.newsletter .link ul li:hover{
+    color: var(--pink); 
+}
+.newsletter .link p{
+    color: white;
+    margin-bottom: 2em;
+}
+.newsletter .link p img{
+    margin-right: .3em;
 }
