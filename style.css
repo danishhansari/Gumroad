@@ -235,7 +235,7 @@ button.open :is(.top,.bottom){
     height:55vh;
 }
 .hero .image .girl{
-    max-width: 450px;
+    max-width: 550px;
     width: 80%;
     position: absolute;
     left: 50%;
@@ -244,7 +244,7 @@ button.open :is(.top,.bottom){
 }
 .hero .image .brush,
 .hero .image .ggg{
-    max-width: 200px;
+    max-width: 150px;
     position: absolute;
 }
 .hero .image .brush{
@@ -537,14 +537,14 @@ align-items: center;
 }
 .designer .design-img .pen{
     position: absolute;
-    bottom: 10px;
-    left: 0px;
-    width: 35%;
+    bottom: 5%;
+    left: 15%;
+    max-width: 250px;
 }
 .designer .design-img .user{
     position: absolute;
-    right: 0px;
-    bottom: 10px;
+    right: 20%;
+    bottom: 10%;
     background: white;
     padding: .3em;
     border: 2px solid black;
@@ -1072,40 +1072,57 @@ display: block;
     .bets .light-pink h1{
         font-size: 2em;
         font-weight: bold;
+        width: 80%;
+        margin: auto;
     }
     .book .black-book{
         background: #000;
         width: 100%;
     }
+    .book .black-book img{
+        max-width: 500px;
+    }
     .book .yellow-book{
         width: 100%;
+        margin: auto;
+    }
+    .book .yellow-book img{
+        display: flex;
+        margin: auto;
     }
     .book .yellow-book .exciting{
-        max-width: 200px;
+        max-width: 250px;
+        bottom: -5%;
     }
     .explore .flex .text h1{
-        font-size: 2.5em;
+        font-size: 3.5em;
+        text-align: center;
     }
     .explore .flex .text p,
     .explore .flex .text a{
-        font-size: 1.3em;
+        font-size: 1.5em;
+        text-align: center;
+    }
+    .explore .flex .text a{
+        display: block;
     }
     .sell-anything .sell-text h1{
-        font-size: 2.5em;
+        font-size: 3.5em;
         font-weight: bold;
     }
     .sell-anything .sell-text li {
-        font-size: 1.3em;
+        font-size: 1.4em;
     }
     .designer .design-text p{
         font-size: 1.2em;
+        text-align: center;
     }
     .designer .design-text .bold {
         font-size: 1.3em;
         font-weight: bold;
     }
     .follow .follow-sell h1{
-        font-size: 2.5em;
+        font-size: 3.5em;
         font-weight: bold;
     }
     .follow .follow-sell p{
@@ -1114,21 +1131,32 @@ display: block;
     .sell-anywhere .anywhere h1{
         font-size: 2.5em;
         font-weight: bold;
+        margin-left: 1em;
     }
     .sell-anywhere .anywhere p{
         font-size: 1.3em;
+        margin-left: 2em;
+        width: 90%;
     }
     .inspiration .text h1{
         font-size: 2.5em;
+        text-align: center;
+    }
+    .inspiration .text h3{
+        font-size: 1.5em;
+        text-align: center;
     }
     .white-girl .white-img{
         margin: auto;
     }
     .grow .grow-text h1{
-        font-size: 2.5em;
+        font-size: 3em;
+        font-weight: bold;
+        width: 80%;
     }
     .grow .grow-text :is(p,a){
-        font-size: 1.3em;
+        font-size: 1.6em;
+        padding: 0px;
     }
     .grow .grow-img img{
         display: flex;
@@ -1166,5 +1194,113 @@ display: block;
     .newsletter .email h1{
         font-size: 2em;
         width: 90%;
+    }
+}
+
+
+@media screen and (min-width:768px) {
+    .hero .selling h2{
+        font-size: 5em;
+        width: 80%;
+        margin: 1em auto;
+        margin-bottom: .5em;
+    }
+    .hero .image .ggg{
+        left: 20%;
+    }
+    .hero .image .brush {
+        right: 10%;
+        top: 10%;
+    }
+    .white-girl .white-text {
+        text-align: center;
+    }
+    .white-girl .white-g{
+        max-width: 120px;
+        bottom: -10%;
+        right: 6%;
+    }
+    .amount .amount-text h1{
+        text-align: center;
+        font-size: 6em;
+        margin-block-start: .5em;
+        margin-bottom: .2em;
+        font-weight: bold;
+    }
+    .amount .amount-text p{
+        font-size: 2em;
+        text-align: center;
+        font-weight: bold;
+    }
+    .amount .amount-text img{
+        bottom: -40%;
+        max-width: 200px;
+    }
+    .amount .amount-img{
+        height: 60vh;
+    }
+    .works .white p{
+        font-size: 1.5em;
+    }
+    .works .yellow{
+        padding: .5em;
+    }
+    .works .yellow .gif {
+        border-radius: 100px;
+        border: 2px solid black;
+    }
+.newsletter .link ul{
+    justify-content: space-evenly;
+    font-size: 2.3em;
+}
+    .inspiration .grid .item{
+        grid-column: 2/9;
+    }
+    .white-girl .white-text{
+        font-size: 1.2em;
+        width: 90%;
+    }
+    .university .explore {
+        text-align: center;
+    }
+    .university .explore h4,
+    .university .explore a{
+        font-size: 1.5em;
+    }
+    .university .explore h1{
+        font-size: 4em;
+    }
+    .university .explore p{
+        font-size: 1.4em;
+        width: 90%;
+        margin: auto;
+    }
+    .new-release .book {
+        margin: auto;
+    }
+    .new-release .book .new-book{
+        top: 2%;
+        left: 10%;
+    }
+    .new-release .founder .ceo{
+        max-width: 100px;
+    }
+    .share-work .text h1{
+        width: 90%;
+        font-size: 3em;
+        margin: auto;
+        margin-bottom:.5em;
+    }
+    .newsletter .email h1{
+        width: 70%;
+    }
+    .newsletter .email input{
+        display: inline-block;
+        width: 90%;
+    }
+    .newsletter .email a{
+        display: inline-block;
+        padding-block: 1.1em
+        ;
     }
 }
