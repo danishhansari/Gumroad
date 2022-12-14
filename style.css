@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600&display=swap');
+
+
 /* Reset and Utilities */
 *,
 *::after,
@@ -6,6 +8,7 @@
     padding: 0px;
     margin: 0px;
     border: 0px;
+    border-collapse: collapse;
     vertical-align: middle;
     outline: none;
     border: none;
@@ -16,23 +19,20 @@
 body{
     font-family: 'Raleway',Arial,Helvitica,sans-serif;
     font-size: 16px;
+    font-weight: 600;
     background: var(--pink);
 }
 html{
     scroll-behavior: smooth;
+
 }
 li{
     list-style: none;
-    font-weight: 500;
 }
 a{
     color: inherit;
     text-decoration: none;
     display: inline-block;
-}
-p{
-    color: #161616;
-    font-weight: 600;
 }
 :root{
     --pink:#ff90e8;
@@ -42,12 +42,15 @@ p{
     --green:#23a094;
     --grey:#90a8ed;
     --tomato:#e2442f;
-    --border:1px solid #000;
 }
+
 .container{
     max-width: 1700px;
     padding-inline: 1.5em;
     margin: 0px auto;
+}
+p{
+    color: #161616;
 }
 img{
     max-width: 100%;
@@ -65,15 +68,17 @@ img{
 .navbar .list{
     transition: .5s ease-in-out;
 }
+
+
 /* Header Navigation */
 .navbar{
-    padding-block-end: .3em;
-    border: var(--border);
+    padding-block-end:.3em;
+    outline: 3px solid;
     position: fixed;
     top: 0px;
     left: 0px;
     width: 100%;
-    height: 6vh;
+    height: 8vh;
     z-index: 2;
     background: #fff;
 }
@@ -86,7 +91,8 @@ img{
 }
 .navbar .logo,
 .navbar .button{
-    margin:1em 0em .2em 0em ;
+    margin-block-start: 1em;
+    margin-block-end: .2em;
 }
 .navbar .button{
     cursor: pointer;
@@ -98,6 +104,7 @@ img{
     rotate 150ms ease-in-out;
     transform-origin: center;
 }
+
 .button.open .line{
     transition: 
     y 100ms ease-in-out,
@@ -116,11 +123,10 @@ button.open :is(.top,.bottom){
 .navbar .list{
     background: #000;
     color: #ccc; 
-    font-size: 1.2em;
-    align-items: flex-start;
-    justify-content: flex-start;
+    align-self: flex-start;
+    justify-self: flex-start;
     position: fixed;
-    top: 6.5vh;
+    top: 8vh;
     z-index: 2;
     display: none;
     height: 50vh;
@@ -132,21 +138,14 @@ button.open :is(.top,.bottom){
 .navbar .login{
     border-block: 1px solid grey;
 }
-    .navbar .login li{
+.navbar .login li{
     margin-block-start: 1em;
     margin-block-end: 1.5em;
-    margin: 1em 0em 1.5em 0em;
     font-size: 1.15em;
-} 
-
+}
 .navbar .items li{
     margin-block-start:1em ;
     margin-block-end: 1.5em;
-    font-size: 1.15em;
-} 
-.navbar .login li,
-.navbar .items li{
-    margin: 1em 0em 1.5em 0em;
     font-size: 1.15em;
 }
 .hero{
@@ -157,34 +156,37 @@ button.open :is(.top,.bottom){
 }
 .hero .selling{
     background:var(--pink);
-    border-block: var(--border);
+    border-block: 1px solid;
     text-align: center;
 }
 .hero .selling h2{
     font-size: 3.5em;
     font-weight: 600;
     line-height: .9;
-    margin-block-start: 1.2em;
+    margin-top: 1.2em;
 }
 .hero .selling p{
     font-size: 1.3em;
     font-weight: 500;
     width: 85%;
-    margin: 1em auto 2em auto;
+    margin-inline: auto;
+    margin-block-start: 1em;
+    margin-block-end: 2em;
 }
 .hero .selling{
     z-index: 1;
 }
 .hero .selling .link{
     display: block;
-    position: relative;
     font-size: 1.3em;
     padding-block:1em;
     background: #000;
     color: white;
-    margin: 1em 0em 3em 0em;
+    margin-block: 1em;
+    margin-bottom: 3em;
     border-radius: 5px;
     transition: .3s transform ease-in-out,.3s background ease-in-out;
+    position: relative;
 }
 
 .hero .selling .link::after,
@@ -197,16 +199,17 @@ button.open :is(.top,.bottom){
     width: 100%;
     transition: .3s transform ease-in-out;
     border-radius: inherit;
-    border-block: var(--border);
+    border-block: 1px solid black;
     text-align: center;
     color: white;
 }
 .hero .selling .link::after{
-    z-index: -2;
+    z-index: -4;
     background: var(--yellow-light);
 }
 .hero .selling .link::before{
-    z-index: -1;
+
+    z-index: -2;
     background:var(--dark-pink);
 }
 .hero .selling .link:hover{
@@ -218,8 +221,10 @@ button.open :is(.top,.bottom){
 .hero .selling .link:hover:before{
     transform: translate(20px, 20px);
 }
+
+
 .hero .image{
-    border-block: var(--border);
+    border-block: 1px solid black;
     background: var(--yellow-dark);
     width: 100%;
 }
@@ -237,7 +242,8 @@ button.open :is(.top,.bottom){
     top: 50%;
     transform: translate(-50%,-50%);
 }
-.hero .image :is(.brush,.ggg){
+.hero .image .brush,
+.hero .image .ggg{
     max-width: 200px;
     position: absolute;
 }
@@ -260,7 +266,7 @@ button.open :is(.top,.bottom){
     background: white;
     font-size: 1.75em;
     text-align: center;
-    border-block: var(--border);
+    border-block: 1px solid black;
 
 }
 .works .white .container{
@@ -271,14 +277,16 @@ button.open :is(.top,.bottom){
 }
 .works .yellow .gif{
     position: relative;
-    border: var(--border);
+    border: 1px solid black;
     margin-block: 1em;
     border-radius: 10px;
 }
+
 .works .yellow .gif p{
     position: absolute;
     background:var(--yellow-dark);
 }
+
 .works .yellow .gif .bottom{
     bottom: -9px;
     padding-inline: 1em;
@@ -294,6 +302,7 @@ button.open :is(.top,.bottom){
 .works .yellow .gif .top{
     top: -9px;
 }
+
 /* Yellow Div Paragraph Right and Left */
 .works .yellow .gif .right,
 .works .yellow .gif .left{
@@ -310,6 +319,9 @@ button.open :is(.top,.bottom){
     top: 25%;
     transform: translate(-50%);
 }
+
+
+
 /* Yellow Border Arrow */
 .works .gif .arrow{
     position: absolute;  
@@ -332,12 +344,16 @@ button.open :is(.top,.bottom){
     bottom: 9%;
     left: -2.5%;
 }
+
+
 /* gif Image */
 .works .gif .center{
 display: flex;
 justify-content: center;
 align-items: center;
 }
+
+
 .bets{
     flex-direction: column;
 }
@@ -346,7 +362,7 @@ align-items: center;
     width: 100%;
     width: 100%;
     text-align: center;
-    border-block: var(--border);
+    border-block: 1px solid black;
     height: 35vh;
     font-size: 1.3em;
     display: flex;
@@ -359,11 +375,12 @@ align-items: center;
 }
 .bets .dark-pink{
     background:var(--dark-pink);
-    border-top:var(--border);
+    border-top:1px solid;
 }
 .bets .light-pink{
     background:var(--pink);
 }
+
 /* books */
 .book .flex{
     flex-direction: column;
@@ -389,7 +406,7 @@ align-items: center;
     display: inline-block;
     padding: .9em .5em;
     font-size: .8em;
-    border:var(--border);
+    border:1px solid black;
     position: absolute;
     top: 15%;
     left: 5%;
@@ -401,18 +418,19 @@ align-items: center;
     background:var(--yellow-dark);
     padding-block:4em;
     position: relative;
-    border-block:var(--border);
+    border-block: 1px solid black;
 }
 .book .yellow-book .img{
     margin: auto;
     width: 80%;
 }
+
 .book .yellow-book .text{
     display: inline-block;
     background: white;
     padding: .9em .5em;
     font-size: .8em;
-    border: var(--border);
+    border: 1px solid black;
     border-radius: 10px;
     position: absolute;
     top: 10%;
@@ -424,12 +442,14 @@ align-items: center;
     bottom: 3%;
     right: 5%;
 }
+
 /* Explore Section */
 .explore{
     background:white;
 }
 .explore .flex .text{
-    margin: 2em 0px 4em 0em;
+    margin-block: 2em;
+    margin-bottom: 4em;
 }
 .explore .flex .text h1{
     font-size: 1.8em;
@@ -453,14 +473,18 @@ align-items: center;
 }
 .sell-anything{
     background: white;
-    border-block: var(--border);
+    border-block: 1px solid black;
 }
 .sell-anything .flex{
     flex-direction: column;
 }
 .sell-anything .sell-img{
-    background: no-repeat center/contain url("img/pay-month.svg");
+    background: url('img/pay-month.svg'),var(--green);
     height: 70vh;
+    background-size: contain;
+    background-position:center;
+    background-repeat: no-repeat;
+}
 
 .sell-anything .sell-text{  
     margin-top: 3em;
@@ -477,7 +501,8 @@ align-items: center;
     line-height: 1.4;
 }
 .sell-anything .sell-text ul{
-    margin: 2em 0em 5em 0em;
+    margin-top: 2em;
+    margin-bottom: 5em;
     font-size: 1.2em;
 }
 .sell-anything .sell-text ul img{
@@ -492,7 +517,7 @@ align-items: center;
 .designer{
     background:var(--pink);
     padding-block: 1em;
-    border-block: var(--border);
+    border-block: 1px solid black;
 }
 .designer .design{
     margin-top: 2em;
@@ -518,7 +543,7 @@ align-items: center;
     bottom: 10px;
     background: white;
     padding: .3em;
-    border: var(--border);
+    border: 2px solid black;
     border-radius: 10px;
     display: inline-block;
 }
@@ -549,7 +574,7 @@ align-items: center;
 }
 .follow .follow-sell{
     background: white;
-    border-block: var(--border);
+    border-block: 1px solid black;
 }
 .follow .follow-sell .container{
     margin-block: 1em;
@@ -567,7 +592,7 @@ align-items: center;
 }
 .men{
     background:var(--green);
-    border-block-end: var(--border);
+    border-block-end: 1px solid black;
 }
 
 /* Sell anywhere section */
@@ -579,18 +604,20 @@ align-items: center;
     display: flex;
     background:var(--yellow-dark);
     padding-block: 3em;
-    border-block:var(--border);
+    border-block:1px solid black;
 }
 .sell-anywhere .tutorial img{
     margin: auto;
 }
+
 .sell-anywhere .anywhere{
-    border-block: var(--border);
+    border-block: 1px solid black;
     background: white;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .sell-anywhere .anywhere h1{
     font-size: 2.2em;
     font-weight: 500;
@@ -602,7 +629,10 @@ align-items: center;
     font-weight: 600;
     margin-bottom: 3em;
 }
+
 /* Inspiration */
+
+
 .inspiration{
     background: white;
 }
@@ -635,7 +665,7 @@ display: block;
     padding: 1em;
 }
 .inspiration .grid .item{
-    border: var(--border);
+    border: 1px solid black;
     border-radius: 10px;
     position: relative;
     max-width: 600px;
@@ -669,7 +699,7 @@ display: block;
     display: inline-block;
     margin: .3em .3em .3em 0em;
     border-radius: 15px;
-    border: var(--border);
+    border: 1px solid black;
     transition: .3s transform ease-in-out;
     z-index: 1;
     cursor: pointer;
@@ -690,7 +720,7 @@ display: block;
     color: white;
 }
 .item span:hover{
-    text-align: center;
+    text-align: right;
     background: black;
     transform: translate(-5px , -5px);
     z-index: 1;
@@ -719,7 +749,7 @@ display: block;
 }
 .white-girl{
     position: relative;
-    border-block:var(--border);
+    border-block:1px solid black;
     padding-block: 1em;
 }
 .white-girl .flex{
@@ -735,27 +765,26 @@ display: block;
     position: absolute;
 }
 .white-girl .white-img .dollar{
-    /* position:absolute; */
+    position:absolute;
     top: 5%;
     left: 0px;
     width: 20%;
 }
-.white-girl .white-img .how-to ,.bold{
-    /* position: absolute; */
+.white-girl .white-img .how-to{
+    position: absolute;
     bottom: 13%;
     right: 0px;
-    width: 100%;
+    width: 50%;
 }
 .white-girl .white-img .bold{
     background: white;
     display: inline-block;
-    padding: .9em .8em;
-    font-size: .5em;
-    border: var(--border);
+    padding: .4em .8em;
+    font-size: .8em;
+    border: 2px solid black;
     border-radius: 50px;
     position: absolute;
     bottom: 15%;
-    left: 0px;
     font-weight: bold;
 }
 .white-girl .white-text p{
@@ -775,6 +804,8 @@ display: block;
     bottom: -3%;
     width: 30%;
 }
+
+
 .amount{
     background:white;
 }
@@ -813,7 +844,7 @@ display: block;
 }
 .grow .grow-text{
     background:var(--yellow-light) ;
-    border-block:var(--border);
+    border-block: 1px solid black;
 }
 .grow .grow-text h1{
     font-size: 2em;
@@ -830,19 +861,17 @@ display: block;
     padding: .5em;
     transition: .3s letter-spacing;
 }
-.grow .grow-text :is(p,a){
-    font-size: 1.2em;
-}
 .grow .grow-text a:hover{
     letter-spacing: 1.5px;
 }
+
 .grow .grow-img{
     padding-block: 2em;
     background:var(--yellow-dark);
     margin: auto;
     width: 100%;
     position: relative;
-    border-block:var(--border);
+    border-block: 1px solid black;
 }
 .grow .grow-img .new{
     position: absolute;
@@ -853,7 +882,7 @@ display: block;
 }
 .university .explore{
     padding-block: 1em;
-    border-block: var(--border);
+    border-block: 1px solid black;
 }
 .university .explore h4{
     margin-block: 2em;
@@ -875,15 +904,12 @@ display: block;
     display: inline-block;
     margin-block: 1em;
 }
-.university .explore :is(p,a){
-    font-size: 1.2em;
-}
 .university .explore a:hover{
     letter-spacing: 1px;
 }
 .new-release{
     background: black;
-    border-block: var(--border);
+    border-block: 1px solid;
     padding-block: 1em;
 }
 .new-release .flex{
@@ -915,8 +941,8 @@ display: block;
     margin-bottom: 3em;
 }
 .share-work{
-    padding-block: 3em;
-    border-block:var(--border);
+    padding-block: 1em;
+    border-block:1px solid black;
     text-align: center;
 }
 .share-work .text h1{
@@ -939,12 +965,13 @@ display: block;
 .newsletter{
     background: #000;
     color: white;
-    border: var(--border);
+    border: 1px solid black;
     padding-block: 1em;
 }
 .newsletter .flex{
     flex-direction: column;
 }
+
 .newsletter .email img{
     width: 200px;
     margin-top: 3em;
@@ -957,15 +984,15 @@ display: block;
 }
 .newsletter .email input{
     background:white;
-    color: black;
     display: block;
     width: 100%;
     padding-block: 1em;
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-family: 'Raleway',sans-serif;
     text-align: center;
+    color: black;
     font-weight: bold;
-    border: var(--border);
+    border: 2px solid black;
     border-radius: 5px;
 }   
 .newsletter .email input::placeholder{
@@ -984,6 +1011,7 @@ display: block;
     width: 20px;
     margin: auto;
 }
+ 
 .newsletter .list {
     margin-top: 2em;
 }
@@ -1006,5 +1034,5 @@ display: block;
     margin-bottom: 2em;
 }
 .newsletter .link p img{
-    margin-right: .5em;
+    margin-right: .3em;
 }
