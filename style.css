@@ -1312,3 +1312,100 @@ display: block;
         ;
     }
 }
+
+
+@media screen and (min-width:968px){
+    .hero{
+        flex-direction: row;
+    }
+    .hero > div{
+        width: 100%;
+        border-inline-end: 2px solid black;
+    }
+    .works .flex .white{
+        padding-block: 2em;
+    }
+    .works .yellow .gif {
+        background:var(--yellow-dark);
+        border-radius:200px;
+        max-width: 100%;
+    }
+    .bets.flex{
+        flex-direction: row;
+    }
+    .book .flex{
+        flex-direction: row;
+    }
+    .book .flex .black-book{
+        border: 2px solid black;
+    }
+    .book .flex > div{
+        width: 100%;
+    }
+    .explore .text p{
+        width: 80%;
+        margin: auto;
+    }
+    .sell-anything .flex{
+        flex-direction: row;
+    }
+    .sell-anything .flex > div{
+        width: 100%;
+        height: inherit;
+        border-inline: 2px solid black;
+    }
+    .sell-anything .flex .sell-img{
+        background-size: cover;
+    }
+    .designer .design.flex{
+        flex-direction: row;
+    }
+    .designer .flex > div{
+        width: 100%;
+    }
+    .follow .flex{
+        flex-direction: row;
+    }
+    .follow .flex > div{
+        width: 100%;
+    }
+    .sell-anywhere .flex{
+        flex-direction: row;
+    }
+    .sell-anywhere .flex > div {
+        width: 100%;
+        border: 2px solid black;
+    }
+    .inspiration .flex {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .inspiration .grid {
+        gap: 15px;
+    }
+    .inspiration .grid .item:nth-child(odd){
+        grid-column: 1/5;
+    } 
+    .inspiration .grid .item:nth-child(even){
+        grid-column: 5/10;
+    }
+    .white-girl .flex {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    .white-girl .flex .white-text {
+        text-align: left;
+    } 
+    .grow .flex{
+        flex-direction: row;
+    }
+    .grow .flex > div{
+        width: 100%;
+        border: 2px solid black;
+    }
+    .grow .flex .grow-img{
+      margin:auto 0;
+    }
+}
