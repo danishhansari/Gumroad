@@ -78,7 +78,7 @@ img{
     top: 0px;
     left: 0px;
     width: 100%;
-    height: 11vh;
+    height: 8vh;
     z-index: 2;
     background: #fff;
 }
@@ -126,10 +126,10 @@ button.open :is(.top,.bottom){
     align-self: flex-start;
     justify-self: flex-start;
     position: fixed;
-    top: 11vh;
+    top: 9vh;
     z-index: 2;
     display: none;
-    height: 70vh;
+    height: 65vh;
     width: 100%;
 }
 .navbar .list ul{
@@ -235,7 +235,7 @@ button.open :is(.top,.bottom){
     height:55vh;
 }
 .hero .image .girl{
-    max-width: 500px;
+    max-width: 450px;
     width: 80%;
     position: absolute;
     left: 50%;
@@ -291,6 +291,7 @@ button.open :is(.top,.bottom){
     bottom: -9px;
     padding-inline: 1em;
 } 
+
 /* Yellow Div Paragraph bottom and top */
 .works .yellow .gif .top,
 .works .yellow .gif .bottom{
@@ -323,7 +324,7 @@ button.open :is(.top,.bottom){
 
 
 /* Yellow Border Arrow */
-.works .gif .arrow{
+/* .works .gif .arrow{
     position: absolute;  
 }
 .works .gif .r-top{
@@ -344,7 +345,7 @@ button.open :is(.top,.bottom){
     bottom: 9%;
     left: -2.5%;
 }
-
+ */
 
 /* gif Image */
 .works .gif .center{
@@ -531,6 +532,9 @@ align-items: center;
     align-items: center;
     justify-content: center;
 }
+.designer .design-img .uncle{
+    max-width: 500px;
+}
 .designer .design-img .pen{
     position: absolute;
     bottom: 10px;
@@ -569,6 +573,7 @@ align-items: center;
     display: flex;
 }
 .follow .flex .follow-img img{
+    max-width: 500px;
     width: 90%;
     margin: auto;
 }
@@ -962,6 +967,9 @@ display: block;
     z-index: 1;
     position: relative;
 }
+.share-work .text a:hover{
+    background: var(--dark-pink);
+}
 .newsletter{
     background: #000;
     color: white;
@@ -1035,4 +1043,128 @@ display: block;
 }
 .newsletter .link p img{
     margin-right: .3em;
+}
+
+@media screen and (min-width :568px) {
+    .hero .image{
+        height: 80vh;
+    }
+    .works .white p{
+        font-size: 1.15em;
+    }
+    .works .yellow p{
+        font-size: 1.3em;
+    }
+    .works .yellow{
+        border-block: 1px solid black;
+    } 
+    .works .yellow .gif{
+        position: relative;
+        height: 60vh;
+    }
+    .works .yellow .gif-image{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    .bets .dark-pink h1,
+    .bets .light-pink h1{
+        font-size: 2em;
+        font-weight: bold;
+    }
+    .book .black-book{
+        background: #000;
+        width: 100%;
+    }
+    .book .yellow-book{
+        width: 100%;
+    }
+    .book .yellow-book .exciting{
+        max-width: 200px;
+    }
+    .explore .flex .text h1{
+        font-size: 2.5em;
+    }
+    .explore .flex .text p,
+    .explore .flex .text a{
+        font-size: 1.3em;
+    }
+    .sell-anything .sell-text h1{
+        font-size: 2.5em;
+        font-weight: bold;
+    }
+    .sell-anything .sell-text li {
+        font-size: 1.3em;
+    }
+    .designer .design-text p{
+        font-size: 1.2em;
+    }
+    .designer .design-text .bold {
+        font-size: 1.3em;
+        font-weight: bold;
+    }
+    .follow .follow-sell h1{
+        font-size: 2.5em;
+        font-weight: bold;
+    }
+    .follow .follow-sell p{
+        font-size: 1.3em;
+    }
+    .sell-anywhere .anywhere h1{
+        font-size: 2.5em;
+        font-weight: bold;
+    }
+    .sell-anywhere .anywhere p{
+        font-size: 1.3em;
+    }
+    .inspiration .text h1{
+        font-size: 2.5em;
+    }
+    .white-girl .white-img{
+        margin: auto;
+    }
+    .grow .grow-text h1{
+        font-size: 2.5em;
+    }
+    .grow .grow-text :is(p,a){
+        font-size: 1.3em;
+    }
+    .grow .grow-img img{
+        display: flex;
+        margin:auto;
+    }
+    .grow .grow-img .new {
+        left: 0%;
+        width: 500px;
+    }
+    .university .explore h4{
+        font-size: 1em;
+    } 
+    .university .explore h1{
+        font-size: 2.5em;
+    }
+    .university .explore :is(p,a){
+        font-size: 1.3em;
+    }
+    .new-release .founder {
+        padding-bottom: 4em;
+    } 
+    .share-work {
+        padding-block: 3em;
+    }
+    .share-work .text h1{
+        font-size: 2.5em;
+    }
+    .share-work .text a{
+        display: inline-block;
+        padding-inline: 2em;
+    }
+    .newsletter .email img {
+        width: 250px;
+    }
+    .newsletter .email h1{
+        font-size: 2em;
+        width: 90%;
+    }
 }
