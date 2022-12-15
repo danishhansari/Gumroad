@@ -128,7 +128,7 @@ button.open :is(.top,.bottom){
     position: fixed;
     top: 9vh;
     z-index: 2;
-    display: none;
+    display: none;  
     height: 65vh;
     width: 100%;
 }
@@ -321,41 +321,12 @@ button.open :is(.top,.bottom){
     top: 25%;
     transform: translate(-50%);
 }
-
-
-
-/* Yellow Border Arrow */
-/* .works .gif .arrow{
-    position: absolute;  
-}
-.works .gif .r-top{
-    top: -10px;
-    left: 23%;
-}
-.works .gif .l-bottom{
-    right: -2.5%;
-    top: 27%;
-    rotate: -90deg;
-}
-.works .gif .r-bottom{
-    bottom: -3.5%;
-    right: 25%;
-}
-.works .gif .l-top{
-    rotate: -90deg;
-    bottom: 9%;
-    left: -2.5%;
-}
- */
-
 /* gif Image */
 .works .gif .center{
 display: flex;
 justify-content: center;
 align-items: center;
 }
-
-
 .bets{
     flex-direction: column;
 }
@@ -1349,6 +1320,9 @@ display: block;
         border-radius:200px;
         max-width: 100%;
     }
+    .works .yellow .gif p{
+        font-size: 1.6em;
+    }
     .bets.flex{
         flex-direction: row;
     }
@@ -1485,7 +1459,53 @@ display: block;
         justify-content: space-around;
     }
 }
-
+@media screen and (min-width:1100px){
+.navbar .item-logo .list{
+    display: block;
+}
+.navbar .flex{
+    display: inline-block;
+}
+.navbar .button{
+    display: none;
+}
+    .navbar .item-logo .list ul li{
+        display: inline-block;
+    }
+    .navbar .list{
+        display: inline;
+        background: transparent;
+    }
+    .navbar .list .items{
+        position: absolute;
+        top:-14%;
+        left:50%;
+        transform: translate(-50%);
+    }
+    .navbar .list .items li{
+        color: black;
+        margin-left: .5em;
+        font-size: 1.3em;
+    }
+    .navbar .list .login{
+        position: absolute;
+        font-size: 1.3em;
+        top:-19%;
+        right: 12%;
+        transform: translate(0%);
+        color: black;
+        border: 0px;
+        position: relative;
+        left: 70%;
+        top: -15%;
+    }
+    .navbar .list .login :nth-child(2){
+        color: black;
+        position: relative;
+        margin-left: .5em;
+        transition: .3s background ease,.3s color ease;
+    }
+}
 
 @media  screen and (min-width:1400px) {
     .works .white p{
