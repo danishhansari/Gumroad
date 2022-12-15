@@ -152,11 +152,12 @@ button.open :is(.top,.bottom){
     margin-top:4.1em;
     position: relative;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
 }
 .hero .selling{
     background:var(--pink);
-    border-block: 1px solid;
     text-align: center;
 }
 .hero .selling h2{
@@ -224,7 +225,7 @@ button.open :is(.top,.bottom){
 
 
 .hero .image{
-    border-block: 1px solid black;
+    /* border-block: 1px solid black; */
     background: var(--yellow-dark);
     width: 100%;
 }
@@ -361,9 +362,8 @@ align-items: center;
 .bets .dark-pink,
 .bets .light-pink{
     width: 100%;
-    width: 100%;
     text-align: center;
-    border-block: 1px solid black;
+    border: 2px solid black;
     height: 35vh;
     font-size: 1.3em;
     display: flex;
@@ -901,6 +901,7 @@ display: block;
 }
 .university .explore p{
     margin-block: 1em;
+    max-width: 700px;
 }
 .university .explore a{
     font-weight: bold;
@@ -1316,6 +1317,8 @@ display: block;
 @media screen and (min-width:968px){
     .hero{
         flex-direction: row;
+        justify-content: center;
+        align-items: center;
     }
     .hero > div{
         width: 100%;
@@ -1458,5 +1461,46 @@ display: block;
     .newsletter .list .list-item{
         display: flex;
         justify-content: space-around;
+    }
+}
+
+
+@media  screen and (min-width:1400px) {
+    .works .white p{
+        margin:auto;
+        width: 60%;
+    }
+    .bets :is(.light-pink,.dark-pink){
+        height: 40vh;
+        font-size: 1.6em;
+        border: 2px solid black;
+    }
+    .designer .design-text p{
+        text-align: left;
+        font-weight: bold;
+        font-size: 1.5em;
+    }
+    .explore .flex .text p{
+        width: 60%;
+    }
+    .designer .design-text {
+        margin-top: 5em;
+    }
+    .follow .follow-sell p{
+        margin-top: 2em;
+        width: 80%;
+        padding-left: 2em;
+    }
+    .follow .follow-sell h1{
+        padding-left: .8em;
+    }
+    .inspiration .grid .item:is(.grid-1,.grid-4,.grid-7,.grid-10,.grid-13,.grid-16){
+        grid-column: 1/4;
+    }
+    .inspiration .grid .item:is(.grid-2,.grid-5,.grid-8, .grid-11,.grid-14,.grid-17){
+        grid-column: 4/7;
+    }
+    .inspiration .grid .item:is(.grid-3,.grid-6,.grid-9,.grid-12,.grid-15){
+        grid-column: 7/10;
     }
 }
