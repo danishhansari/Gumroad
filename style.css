@@ -45,7 +45,7 @@ a{
 }
 
 .container{
-    max-width: 1700px;
+    max-width: 1500px;
     padding-inline: 1.5em;
     margin: 0px auto;
 }
@@ -225,7 +225,7 @@ button.open :is(.top,.bottom){
 
 
 .hero .image{
-    /* border-block: 1px solid black; */
+    border: 2px solid black;
     background: var(--yellow-dark);
     width: 100%;
 }
@@ -954,7 +954,8 @@ display: block;
 .share-work .text h1{
     font-size: 2em;
     margin-block: 1em;
-    line-height: 1;
+    line-height: 1.2;
+    max-width: 800px;
 }
 .share-work .text a{
     background: #000;
@@ -1160,11 +1161,23 @@ display: block;
     .grow .grow-text h1{
         font-size: 3em;
         font-weight: bold;
-        width: 80%;
+        width: 90%;
+        line-height: 1;
+        margin-top: 1em;
+        margin-left: 10%;
     }
     .grow .grow-text :is(p,a){
         font-size: 1.6em;
+        margin: auto;
         padding: 0px;
+    }
+    .grow .grow-text p{
+        max-width: 80%;
+        margin-block-start:1em;
+    }
+    .grow .grow-text a{
+        margin-top: 1em;
+        margin-left: 9%;
     }
     .grow .grow-img img{
         display: flex;
@@ -1212,6 +1225,10 @@ display: block;
         width: 80%;
         margin: 1em auto;
         margin-bottom: .5em;
+    }
+    .hero .selling{
+        max-width: 700px;
+        margin:auto ;
     }
     .hero .image .ggg{
         left: 20%;
@@ -1359,6 +1376,9 @@ display: block;
     .sell-anything .flex .sell-img{
         background-size: cover;
     }
+    .sell-anything .flex .sell-text p{
+        max-width: 500px;
+    }
     .designer .design.flex{
         flex-direction: row;
     }
@@ -1420,6 +1440,7 @@ display: block;
     }
     .new-release .flex{
         flex-direction: row-reverse;
+        align-items: center;
     }
     .new-release .flex > div{
         width: 100%;
@@ -1436,9 +1457,10 @@ display: block;
         display: inline-block;
         margin-right: 1em;
     }
-    .new-release .flex .founder > *{
+    .new-release .flex .founder > p{
         display: inline-block;
         font-size: 1.2em;
+        max-width: 80%;
     }
     .share-work .container .text h1{
         width: 90%;
@@ -1502,5 +1524,11 @@ display: block;
     }
     .inspiration .grid .item:is(.grid-3,.grid-6,.grid-9,.grid-12,.grid-15){
         grid-column: 7/10;
+    }
+    .white-girl .white-text p{
+        width: 80%;
+    }
+    .grow .flex .grow-text h1{
+        margin-top: 2em;
     }
 }
