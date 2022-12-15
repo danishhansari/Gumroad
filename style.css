@@ -453,7 +453,7 @@ align-items: center;
 .sell-anything .sell-img{
     background: url('img/pay-month.svg'),var(--green);
     height: 70vh;
-    background-size: contain;
+    background-size:cover;
     background-position:center;
     background-repeat: no-repeat;
 }
