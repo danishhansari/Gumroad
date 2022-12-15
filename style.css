@@ -674,7 +674,6 @@ display: block;
     border: 1px solid black;
     border-radius: 10px;
     position: relative;
-    max-width: 600px;
     padding: 1em;
 }
 .inspiration .item img{
@@ -874,7 +873,7 @@ display: block;
 .grow .grow-img{
     padding-block: 2em;
     background:var(--yellow-dark);
-    margin: auto;
+    margin: 0;
     width: 100%;
     position: relative;
     border-block: 1px solid black;
@@ -1405,7 +1404,59 @@ display: block;
         width: 100%;
         border: 2px solid black;
     }
-    .grow .flex .grow-img{
-      margin:auto 0;
+    .grow .flex .grow-img .container {
+        position: relative;
+        top: 50%;
+        left : 50%;
+        transform: translate(-50%,-50%
+        );
+    }
+    .grow .flex .grow-img .new{
+        bottom: -20%;
+        left: 0px;
+    }
+    .new-release .flex{
+        flex-direction: row-reverse;
+    }
+    .new-release .flex > div{
+        width: 100%;
+    } 
+    .new-release .flex .book img{
+        width: 80%;
+        display: flex;
+        margin: auto;
+    }
+    .new-release .flex .founder {
+        padding: 1em;
+    }
+    .new-release .flex .founder img{
+        display: inline-block;
+        margin-right: 1em;
+    }
+    .new-release .flex .founder > *{
+        display: inline-block;
+        font-size: 1.2em;
+    }
+    .share-work .container .text h1{
+        width: 90%;
+        font-size: 3.8em;
+    }
+    .share-work .container .text a{
+        font-size: 1.4em;
+    }
+    .newsletter .flex {
+        flex-direction: row;
+        justify-content:  space-between;
+        align-items: flex-start;
+    }
+    .newsletter .flex > div{
+        width: 100%;
+    }
+    .newsletter .flex .email input{
+        width: 75%;
+    }
+    .newsletter .list .list-item{
+        display: flex;
+        justify-content: space-around;
     }
 }
